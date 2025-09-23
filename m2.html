@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Studi Kasus — Penjualan Pet Grow a Garden</title>
+  <style>
+    :root{
+      --bg:#f0fdf4; --card:#fff; --muted:#475569; --accent:#16a34a; --glass:rgba(255,255,255,0.6);
+      --radius:12px; --max-width:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,#dcfce7 0%, var(--bg) 60%); color:#0f172a;
+      padding:32px; display:flex; justify-content:center; align-items:flex-start; font-size:16px; line-height:1.45;
+    }
+    .wrap{width:100%; max-width:var(--max-width)}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#22c55e);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(22,163,74,0.2)}
+    .title{font-size:18px;font-weight:700}
+    .subtitle{font-size:13px;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns: 1fr 340px; gap:22px;}
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 6px 20px rgba(12,18,35,0.06)}
+
+    .hero{display:flex;gap:20px;align-items:center}
+    .hero .left{flex:1}
+    .eyebrow{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:0.6px}
+    h1{margin:6px 0 10px;font-size:22px}
+    p.lead{margin:0;color:var(--muted)}
+
+    .meta{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .pill{background:linear-gradient(180deg, rgba(22,163,74,0.08), rgba(34,197,94,0.04));padding:8px 10px;border-radius:999px;font-size:13px;color:var(--accent);font-weight:600}
+
+    .hero-visual{width:220px;height:140px;border-radius:10px;background:#f0fdf4 url('69fee9c2-c021-4c23-9f66-bebdd0aaa458.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:#0f172a;font-weight:700}
+
+    section{margin-top:18px}
+    .section-title{display:flex;justify-content:space-between;align-items:center}
+    .section-title h2{margin:0;font-size:16px}
+    .section-title a{font-size:13px;color:var(--accent);text-decoration:none}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .card-small{background:var(--card);padding:14px;border-radius:10px}
+    .stat{font-size:20px;font-weight:700}
+    .stat-label{font-size:13px;color:var(--muted)}
+
+    .timeline{position:relative;padding-left:18px}
+    .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--accent),#22c55e);border-radius:2px}
+    .step{position:relative;padding:10px 8px 10px 18px;margin-bottom:8px}
+    .step .dot{position:absolute;left:-6px;top:14px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid white;box-shadow:0 2px 6px rgba(2,6,23,0.08)}
+    .step h3{margin:0;font-size:14px}
+    .step p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    aside{position:sticky;top:32px}
+    .kpi{display:flex;flex-direction:column;gap:12px}
+    .kpi .k{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.9))}
+    .team{display:flex;gap:10px;margin-top:12px}
+    .avatar{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#fff,#dcfce7);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+
+    .actions{display:flex;gap:8px;margin-top:16px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06)}
+
+    .pet-shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:16px}
+    .pet{background:var(--card);border-radius:12px;padding:12px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    .pet img{width:100px;height:100px;object-fit:contain}
+    .pet h3{margin:10px 0 4px;font-size:15px}
+    .pet p{margin:0;color:var(--muted);font-size:14px}
+    .price{font-weight:700;color:var(--accent);margin-top:6px}
+
+    @media (max-width:980px){.grid{grid-template-columns:1fr;}aside{position:relative;top:0}.hero-visual{width:140px;height:90px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">GG</div>
+        <div>
+          <div class="title">Studi Kasus — Penjualan Pet di Grow a Garden</div>
+          <div class="subtitle">Menggunakan gambar toko dari game</div>
+        </div>
+      </div>
+      <div class="subtitle">Tugas: Grow a Garden</div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <div class="hero">
+          <div class="left">
+            <div class="eyebrow">Kasus</div>
+            <h1>Proses Penjualan Pet di Game Grow a Garden</h1>
+            <p class="lead">Studi kasus ini membahas bagaimana pemain membeli pet dalam game Grow a Garden, tantangan dalam UX pembelian, serta solusi untuk meningkatkan engagement.</p>
+            <div class="meta">
+              <div class="pill">Game Simulation</div>
+              <div class="pill">Durasi: 3 minggu</div>
+              <div class="pill">Tim: 3 orang</div>
+            </div>
+          </div>
+          <div class="hero-visual"></div>
+        </div>
+
+        <section>
+          <div class="section-title"><h2>Daftar Pet Toko</h2><a href="#">Lihat Semua</a></div>
+          <div class="pet-shop">
+            <div class="pet">
+              <img src="Raccon_Better_Quality.webp" alt="Raccoon">
+              <h3>Raccoon</h3>
+              <p>Pet cerdik yang suka mencari item.</p>
+              <div class="price">500 Coin</div>
+            </div>
+            <div class="pet">
+              <img src="DragonflyIcon.webp" alt="Dragonfly">
+              <h3>Dragonfly</h3>
+              <p>Serangga indah dengan sayap bercahaya.</p>
+              <div class="price">650 Coin</div>
+            </div>
+            <div class="pet">
+              <img src="DiscoBeeIcon.webp" alt="Disco Bee">
+              <h3>Disco Bee</h3>
+              <p>Lebah keren dengan kacamata hitam.</p>
+              <div class="price">700 Coin</div>
+            </div>
+            <div class="pet">
+              <img src="Kitsune.webp" alt="Kitsune">
+              <h3>Kitsune</h3>
+              <p>Rubah mistis dengan ekor bercahaya.</p>
+              <div class="price">850 Coin</div>
+            </div>
+            <div class="pet">
+              <img src="T-Rex.webp" alt="T-Rex">
+              <h3>T-Rex</h3>
+              <p>Dinosaurus kuat untuk menemani berkebun.</p>
+              <div class="price">1200 Coin</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title"><h2>Timeline</h2><a href="#">Detail</a></div>
+          <div class="timeline">
+            <div class="step"><div class="dot"></div><h3>Minggu 1 — Research</h3><p>Analisis alur pembelian pet & feedback pemain.</p></div>
+            <div class="step"><div class="dot"></div><h3>Minggu 2 — Design</h3><p>Membuat mockup toko baru dengan UI ramah pengguna.</p></div>
+            <div class="step"><div class="dot"></div><h3>Minggu 3 — Test</h3><p>Uji coba dengan 15 pemain aktif Grow a Garden.</p></div>
+          </div>
+        </section>
+
+        <div class="actions">
+          <button class="btn primary">Beli Sekarang</button>
+          <button class="btn ghost">Bagikan</button>
+        </div>
+      </main>
+
+      <aside>
+        <div class="card kpi">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div><div style="font-weight:700">Ringkasan KPI</div><div style="color:var(--muted);font-size:13px">Perbandingan sebelum & sesudah</div></div>
+            <div style="text-align:right"><div style="font-weight:700">2025</div></div>
+          </div>
+
+          <div class="k"><div><div style="font-weight:800">+25%</div><small>Pembelian Berhasil</small></div><div style="align-self:center">▶</div></div>
+          <div class="k"><div><div style="font-weight:800">-18%</div><small>Keluhan User</small></div><div style="align-self:center">▶</div></div>
+
+          <div style="margin-top:10px"><div style="font-weight:700">Tim</div><div class="team"><div class="avatar">AR</div><div class="avatar">SY</div><div class="avatar">DM</div></div></div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="card" style="padding:14px;text-align:center">
+          <div style="font-weight:700">Catatan</div>
+          <p style="color:var(--muted);font-size:14px;margin-top:8px">Tambahkan animasi pada preview pet agar lebih menarik pembeli.</p>
+          <div style="margin-top:12px"><button class="btn primary" style="width:100%">Export Case</button></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
