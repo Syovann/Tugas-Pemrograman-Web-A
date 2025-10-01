@@ -1,0 +1,9 @@
+/* Custom styling */
+body {
+  background-color: #fafafa;
+}
+
+.card img {
+  object-fit: cover;
+  height: 300px;
+}

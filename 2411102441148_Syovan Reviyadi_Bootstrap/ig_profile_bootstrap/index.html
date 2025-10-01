@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Profile Clone</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/custom.css"> <!-- optional -->
+  <style>
+    .story-highlight {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f9fa;
+    }
+    .story-highlight img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-light bg-light border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Instagram</a>
+      <button class="btn btn-outline-primary d-none d-md-block">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Profile Header -->
+  <div class="container my-4">
+    <div class="row align-items-center">
+      <!-- Profile Picture -->
+      <div class="col-4 col-md-3 text-center">
+        <img src="assets/img/potoprofil.jpg" class="rounded-circle img-fluid" alt="Profile">
+      </div>
+      <!-- Profile Info -->
+      <div class="col-8 col-md-9">
+        <div class="d-flex flex-wrap align-items-center mb-2">
+          <h2 class="me-2 mb-0">syovann</h2>
+          <!-- Verified Badge -->
+          <img src="assets/img/verif.jpeg" alt="verified" width="20" height="20" class="me-2">
+          <!-- Tombol Follow/Edit -->
+          <button class="btn btn-primary btn-sm order-2 order-md-1">Follow</button>
+        </div>
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item"><b>12</b> posts</li>
+          <li class="list-inline-item"><b>580</b> followers</li>
+          <li class="list-inline-item"><b>350</b> following</li>
+        </ul>
+        <p class="mb-1 fw-bold">panpann</p>
+        <p class="mb-1">yet</p>
+        <!-- Menambahkan daftar pengikut -->
+        <small class="text-muted">Diikuti oleh <b>azril_rosadi_15</b>, <b>yoo_dika04</b> dan 17 lainnya</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Highlight Stories -->
+  <div class="container my-3 d-flex gap-3">
+    <div class="text-center">
+      <div class="story-highlight">
+        <img src="assets/img/sorot1.jpeg" alt="highlight1">
+      </div>
+      <small>Game</small>
+    </div>
+    <div class="text-center">
+      <div class="story-highlight">
+        <img src="assets/img/sorot2.jpeg" alt="highlight2">
+      </div>
+      <small>Foto</small>
+    </div>
+    <div class="text-center">
+      <div class="story-highlight">
+        <img src="assets/img/sorot3.jpeg" alt="highlight3">
+      </div>
+      <small>Teman</small>
+    </div>
+  </div>
+
+  <!-- Tabs di atas postingan -->
+  <div class="container border-top">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"><i class="bi bi-grid-3x3"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="bi bi-camera-reels"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="bi bi-person-square"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Feed Section -->
+  <div class="container mt-3">
+    <div class="row g-2">
+      <!-- 12 gambar -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto1.jpeg" class="card-img-top" alt="post1">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto2.jpeg" class="card-img-top" alt="post2">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto3.jpeg" class="card-img-top" alt="post3">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto4.jpeg" class="card-img-top" alt="post4">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto5.jpeg" class="card-img-top" alt="post5">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto6.jpg" class="card-img-top" alt="post6">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto7.jpg" class="card-img-top" alt="post7">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto8.jpg" class="card-img-top" alt="post8">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto9.jpg" class="card-img-top" alt="post9">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto10.JPG" class="card-img-top" alt="post10">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto11.png" class="card-img-top" alt="post11">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="assets/img/poto12.png" class="card-img-top" alt="post12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-3 mt-4 border-top">
+    <small>© 2025 Instagram Clone by Bootstrap</small>
+  </footer>
+
+  <!-- Bootstrap JS & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
