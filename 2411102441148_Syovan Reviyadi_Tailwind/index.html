@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Profile - Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header Profile -->
+  <header class="bg-white shadow p-4 flex flex-col sm:flex-row items-center sm:items-start sm:gap-8">
+    <!-- Profile Picture -->
+    <img src="assets/img/potoprofil.jpeg" alt="Profile"
+      class="w-28 h-28 rounded-full object-cover border-2 border-gray-300" />
+
+    <!-- Profile Info -->
+    <div class="flex-1 text-center sm:text-left mt-4 sm:mt-0">
+      <div class="flex items-center justify-center sm:justify-start gap-2">
+        <h1 class="text-2xl font-bold">syovann</h1>
+        <!-- Verified Badge -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" 
+             alt="Verified" class="w-5 h-5" />
+        <button
+          class="bg-blue-500 text-white px-4 py-1 rounded text-sm hover:bg-blue-600 transition ml-2">Follow</button>
+      </div>
+
+      <!-- Statistik -->
+      <div class="flex justify-center sm:justify-start gap-6 mt-3 text-sm">
+        <div><span class="font-bold">12</span> posts</div>
+        <div><span class="font-bold">580</span> followers</div>
+        <div><span class="font-bold">350</span> following</div>
+      </div>
+
+      <!-- Bio -->
+      <p class="mt-2 text-gray-700">yeeettt.</p>
+
+      <!-- Sorotan -->
+      <div class="flex justify-center sm:justify-start gap-6 mt-4">
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full border-2 border-gray-300 flex items-center justify-center bg-white">
+            <img src="assets/img/sorot1.jpeg" class="w-14 h-14 rounded-full object-cover" />
+          </div>
+          <span class="text-xs mt-1">poto</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full border-2 border-gray-300 flex items-center justify-center bg-white">
+            <img src="assets/img/sorot2.jpeg" class="w-14 h-14 rounded-full object-cover" />
+          </div>
+          <span class="text-xs mt-1">pren</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full border-2 border-gray-300 flex items-center justify-center bg-white">
+            <img src="assets/img/sorot3.jpeg" class="w-14 h-14 rounded-full object-cover" />
+          </div>
+          <span class="text-xs mt-1">game</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tab Navigasi -->
+  <section class="bg-white border-t mt-4">
+    <div class="flex justify-center gap-12 py-2 text-sm font-semibold text-gray-600">
+      <div class="flex items-center gap-1 border-t-2 border-black">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        Posts
+      </div>
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 4.354a4 4 0 100 15.292 4 4 0 000-15.292z" />
+        </svg>
+        Tagged
+      </div>
+    </div>
+  </section>
+
+  <!-- Feed -->
+  <main class="p-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+      <img src="assets/img/poto1.jpeg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto2.jpeg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto3.jpeg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto4.jpeg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto5.jpeg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto6.jpg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto7.jpg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto8.jpg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto9.jpg" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto10.JPG" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto11.png" class="w-full h-48 object-cover rounded" />
+      <img src="assets/img/poto12.png" class="w-full h-48 object-cover rounded" />
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center p-4 mt-8 border-t">
+    <p class="text-gray-500 text-sm">&copy; 2025 Instagram Clone with TailwindCSS</p>
+  </footer>
+
+</body>
+</html>
