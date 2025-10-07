@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Syovan Reviyadi</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bs-body-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    body{font-family:var(--bs-body-font);}
+    .hero{background: linear-gradient(120deg, #0d6efd33 0%, #6f42c133 100%);}
+    .profile-photo{width:140px;height:140px;object-fit:cover;border-radius:50%;box-shadow:0 6px 18px rgba(13,110,253,0.12)}
+    .skill-badge{border-radius:10px;padding:.45rem .7rem;margin:.2rem;border:1px solid #e9ecef}
+    .project-card img{height:180px;object-fit:cover}
+    footer{background:#0b1220;color:#fff}
+    @media(min-width:992px){.hero .col-lg-6{align-self:center}}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Syovan Reviyadi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+          <li class="nav-item ms-2"><a class="btn btn-outline-primary" href="#contact">Hubungi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h1 class="display-5 fw-bold">Halo, saya <span class="text-primary">Syovan</span></h1>
+          <p class="lead text-muted">Saya seorang <strong>Frontend Developer</strong> / <strong>UI Designer</strong> yang membuat antarmuka yang rapi, responsif, dan mudah digunakan.</p>
+          <div class="d-flex gap-2">
+            <a href="#projects" class="btn btn-primary btn-lg">Lihat Proyek</a>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg">Kontak Saya</a>
+          </div>
+          <div class="mt-4">
+            <small class="text-muted">Berdomisili di: <strong>Samarinda</strong> • Bekerja lepas / tersedia</small>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="sopan.jpg" alt="Foto Profil" class="profile-photo">
+          <div class="mt-3">
+            <p class="mb-0">Follow saya:</p>
+            <div class="d-flex justify-content-center gap-2 mt-2">
+              <a class="btn btn-outline-dark btn-sm" href="https://github.com/Syovann">GitHub</a>
+              <a class="btn btn-outline-dark btn-sm" href="#">LinkedIn</a>
+              <a class="btn btn-outline-dark btn-sm" href="https://www.instagram.com/syovann/">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="fw-bold">Tentang Saya</h2>
+          <p class="text-muted">Saya memiliki pengalaman dalam membangun aplikasi web dengan fokus pada pengalaman pengguna, performa, dan aksesibilitas. Saya nyaman menggunakan HTML, CSS, JavaScript, dan framework modern.</p>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <ul class="list-unstyled text-start">
+                <li><strong>Nama:</strong> Syovan Reviyadi</li>
+                <li><strong>Pendidikan:</strong> S1</li>
+                <li><strong>Email:</strong> syovanrevi21@gmail.com</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled text-start">
+                <li><strong>Telepon:</strong> +62 895-2675-7916</li>
+                <li><strong>Status:</strong> Buka untuk pekerjaan</li>
+                <li><strong>Lokasi:</strong> Samarinda, Indonesia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Proyek Terpilih</h2>
+        <a href="#" class="text-decoration-none">Lihat semua →</a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Project Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card shadow-sm h-100">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=example" class="card-img-top" alt="Project 1">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Nama Proyek 1</h5>
+              <p class="card-text text-muted">Deskripsi singkat proyek — teknologi: Bootstrap, JavaScript, API.</p>
+              <div class="mt-auto d-flex gap-2 align-items-center">
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal1">Detail</button>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Live</a>
+                <a href="#" class="btn btn-outline-dark btn-sm">Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card shadow-sm h-100">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=example" class="card-img-top" alt="Project 2">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Nama Proyek 2</h5>
+              <p class="card-text text-muted">Deskripsi singkat proyek — teknologi: React, Tailwind, Node.js.</p>
+              <div class="mt-auto d-flex gap-2 align-items-center">
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal2">Detail</button>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Live</a>
+                <a href="#" class="btn btn-outline-dark btn-sm">Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card shadow-sm h-100">
+            <img src="https://images.unsplash.com/photo-1520975911104-6f2b6e0c10f4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=example" class="card-img-top" alt="Project 3">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Nama Proyek 3</h5>
+              <p class="card-text text-muted">Deskripsi singkat proyek — teknologi: PHP, MySQL, Bootstrap.</p>
+              <div class="mt-auto d-flex gap-2 align-items-center">
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal3">Detail</button>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Live</a>
+                <a href="#" class="btn btn-outline-dark btn-sm">Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Keahlian</h2>
+      <div class="d-flex flex-wrap justify-content-center">
+        <span class="skill-badge">HTML</span>
+        <span class="skill-badge">CSS</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">Bootstrap</span>
+        <span class="skill-badge">Git & GitHub</span>
+        <span class="skill-badge">Canva</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="fw-bold">Kontak</h2>
+          <p class="text-muted">Tertarik bekerja sama? Kirim pesan lewat form ini atau hubungi saya langsung lewat email / telepon.</p>
+          <ul class="list-unstyled">
+            <li><strong>Email:</strong> syovanrevi21@gmail.com</li>
+            <li><strong>Telepon:</strong> +62 895-2675-7916</li>
+            <li><strong>Lokasi:</strong> Samarinda, Indonesia</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <form class="card p-3 shadow-sm">
+            <div class="mb-3">
+              <label class="form-label">Syovan</label>
+              <input type="text" class="form-control" placeholder="Nama Anda">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">syovanrevi21@gmail.com/label>
+              <input type="email" class="form-control" placeholder="email@domain.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Halooo</label>
+              <textarea class="form-control" rows="4" placeholder="Tulis pesan..."></textarea>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-primary">Kirim Pesan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; <span id="thisYear"></span> Nama Anda. Semua hak cipta dilindungi.</p>
+      <small class="text-muted">Dibuat dengan ❤️ menggunakan Bootstrap</small>
+    </div>
+  </footer>
+
+  <!-- Project Modals (example) -->
+  <div class="modal fade" id="projectModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nama Proyek 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Deskripsi proyek lengkap: tujuan, peran saya, teknologi yang dipakai, tantangan, dan hasil.</p>
+          <ul>
+            <li>Peran: Frontend Developer</li>
+            <li>Teknologi: Bootstrap, JS, REST API</li>
+            <li>Durasi: 2 bulan</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-outline-secondary">Lihat Live</a>
+          <a href="#" class="btn btn-outline-dark">Repo GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="projectModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nama Proyek 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Deskripsi proyek lengkap...</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-outline-secondary">Lihat Live</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="projectModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nama Proyek 3</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Deskripsi proyek lengkap...</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-outline-secondary">Lihat Live</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Set year in footer
+    document.getElementById('thisYear').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href.startsWith('#')){
+          const el = document.querySelector(href);
+          if(el){
+            e.preventDefault();
+            el.scrollIntoView({behavior:'smooth', block:'start'});
+          }
+        }
+      });
+    });
+  </script>
+
+  <!--
+    INSTRUKSI:
+    - Simpan file ini sebagai index.html
+    - Untuk assets lokal: buat folder "assets/images/" dan ganti src gambar ke path lokal
+    - Ganti semua placeholder (Nama Anda, email, deskripsi proyek) sesuai kebutuhan
+    - Jika ingin file ZIP atau struktur folder siap pakai, beri tahu saya dan saya akan bantu buatkan
+  -->
+</body>
+</html>
