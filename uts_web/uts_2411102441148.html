@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+      --bg:#f0fdf4; --card:#fff; --muted:#475569; --accent:#16a34a; --glass:rgba(255,255,255,0.6);
+      --radius:12px; --max-width:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,#dcfce7 0%, var(--bg) 60%); color:#0f172a;
+      padding:32px; display:flex; justify-content:center; align-items:flex-start; font-size:16px; line-height:1.45;
+    }
+    .wrap{width:100%; max-width:var(--max-width)}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#22c55e);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(22,163,74,0.2)}
+    .title{font-size:18px;font-weight:700}
+    .subtitle{font-size:13px;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns: 1fr 340px; gap:22px;}
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 6px 20px rgba(12,18,35,0.06)}
+
+    .hero{display:flex;gap:20px;align-items:center}
+    .hero .left{flex:1}
+    .eyebrow{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:0.6px}
+    h1{margin:6px 0 10px;font-size:22px}
+    p.lead{margin:0;color:var(--muted)}
+
+    .meta{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .pill{background:linear-gradient(180deg, rgba(22,163,74,0.08), rgba(34,197,94,0.04));padding:8px 10px;border-radius:999px;font-size:13px;color:var(--accent);font-weight:600}
+
+    .hero-visual{width:220px;height:140px;border-radius:10px;background:#f0fdf4 url('69fee9c2-c021-4c23-9f66-bebdd0aaa458.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:#0f172a;font-weight:700}
+
+    section{margin-top:18px}
+    .section-title{display:flex;justify-content:space-between;align-items:center}
+    .section-title h2{margin:0;font-size:16px}
+    .section-title a{font-size:13px;color:var(--accent);text-decoration:none}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .card-small{background:var(--card);padding:14px;border-radius:10px}
+    .stat{font-size:20px;font-weight:700}
+    .stat-label{font-size:13px;color:var(--muted)}
+
+    .timeline{position:relative;padding-left:18px}
+    .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--accent),#22c55e);border-radius:2px}
+    .step{position:relative;padding:10px 8px 10px 18px;margin-bottom:8px}
+    .step .dot{position:absolute;left:-6px;top:14px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid white;box-shadow:0 2px 6px rgba(2,6,23,0.08)}
+    .step h3{margin:0;font-size:14px}
+    .step p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    aside{position:sticky;top:32px}
+    .kpi{display:flex;flex-direction:column;gap:12px}
+    .kpi .k{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.9))}
+    .team{display:flex;gap:10px;margin-top:12px}
+    .avatar{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#fff,#dcfce7);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+
+    .actions{display:flex;gap:8px;margin-top:16px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06)}
+
+    .pet-shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:16px}
+    .pet{background:var(--card);border-radius:12px;padding:12px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    .pet img{width:100px;height:100px;object-fit:contain}
+    .pet h3{margin:10px 0 4px;font-size:15px}
+    .pet p{margin:0;color:var(--muted);font-size:14px}
+    .price{font-weight:700;color:var(--accent);margin-top:6px}
+
+    @media (max-width:980px){.grid{grid-template-columns:1fr;}aside{position:relative;top:0}.hero-visual{width:140px;height:90px}}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+    <div class="grid">
+      <main class="card">
+        <div class="hero">
+          <div class="left">
+            <h1>Input Data</h1>
+
+            <form action="/action_page.php">
+        <label for="username">NAMA LENGKAP:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="nim">NIM:</label><br>
+        <input type="nim" id="nim" name="nim"><br>
+        <label for="sms">SEMESTER:</label><br>
+        <input type="sms" id="sms" name="sms"><br>
+        <label for="prs">PROGRAM STUDI:</label><br>
+        <select name="prs" id="prs">
+        <option value="pilih">--Pilih--</option>
+        <option value="S1TI">S1 Teknik Informatika</option>
+        <option value="S1TM">S1 Teknik Mesin</option>
+        <option value="S1TS">S1 Teknik Sipil</option>
+        <br>
+        <label for="eml">EMAIL:</label><br>
+        <input type="eml" id="eml" name="eml"><br>
+
+        <input type="submit" value="Kirim Data">
+</form>
+
+            </div>
+          </div>
+        </div>
+
+        <section>
+          <div class="section-title"><h2>Informasi Pengiriman</h2></div>
+          <div class="timeline">
+            <div class="step"><div class="✓"></div><h3>Apa yang terjadi saat Anda klik "Kirim Data"?</h3><p>✓ Data ditampilkan di Console</p><p>✓ Data Disimpan di Array</p><p>✓ Jumlah Data di Update</p><p>✓ Form Akan Kosong Kembali</p></div>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card kpi">
+          <table style="width:100%">
+            <tr>
+                <th>No</th>
+                <th>NAMA</th> 
+                <th>INFO</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Syovan Reviyadi</td>
+                <td>Prodi: S1
+                Semester: 3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ibnu Shabill Al Zahari</td>
+                <td>Prodi: S1
+                Semester: 3</td>
+            </tr>
+            </table>
+        </div>
+
+        <div style="height:18px"></div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
