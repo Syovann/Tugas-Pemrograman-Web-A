@@ -1,0 +1,194 @@
+/* GLOBAL STYLES - DARK MODE */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Latar belakang gelap */
+    background-color: #121212; 
+    /* Warna teks terang */
+    color: #e0e0e0; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    /* Warna utama yang cerah untuk kontras */
+    color: #4CAF50; /* Hijau Uang/Emerald */
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+/* CARD STYLES */
+.form-card, .result-card {
+    /* Latar belakang kartu lebih gelap dari body */
+    background-color: #1e1e1e; 
+    padding: 30px;
+    border-radius: 12px;
+    /* Bayangan lembut */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    text-align: left;
+    border: 1px solid #333; /* Border tipis untuk pemisah */
+}
+
+.result-card {
+    /* Garis penanda hasil */
+    border-left: 5px solid #4CAF50; 
+}
+
+/* INPUT STYLES (Form) */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #4CAF50;
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    /* Warna input gelap */
+    background-color: #2c2c2c; 
+    /* Warna teks input terang */
+    color: #e0e0e0; 
+    border: 1px solid #555;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* BUTTON STYLES */
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.primary {
+    /* Tombol utama warna hijau uang */
+    background-color: #4CAF50; 
+    color: #121212; /* Teks gelap di tombol terang */
+}
+
+.btn.primary:hover {
+    background-color: #43A047;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    /* Tombol sekunder abu-abu gelap */
+    background-color: #555; 
+    color: #e0e0e0;
+}
+
+.btn.secondary:hover {
+    background-color: #777;
+    transform: translateY(-2px);
+}
+
+/* RESULT STYLES (Process Page) */
+.input-summary {
+    border: 1px dashed #444;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.input-summary h2 {
+    font-size: 1.1em;
+    color: #90CAF9; /* Warna info */
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.input-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.input-summary li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 1.05em;
+}
+
+.input-summary li span {
+    font-weight: bold;
+    color: #fff;
+}
+
+.final-result {
+    text-align: center;
+    /* Latar belakang hasil lebih menonjol */
+    background-color: #28302A; 
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 2px solid #4CAF50;
+}
+
+.final-result h2 {
+    color: #4CAF50;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.saldo-value {
+    font-size: 2.5em;
+    font-weight: 900;
+    /* Saldo akhir paling menonjol */
+    color: #90EE90; 
+    margin: 10px 0;
+}
+
+.example-note {
+    font-style: italic;
+    color: #b0b0b0;
+    font-size: 0.9em;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+}
+
+.error-message {
+    color: #FF6B6B; /* Warna merah untuk error */
+    font-weight: bold;
+    text-align: center;
+}
+
+.back-button {
+    margin-top: 20px;
+}

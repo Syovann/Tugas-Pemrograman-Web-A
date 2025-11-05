@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Hitung Saldo Akhir Tabungan</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💵 Hitung Saldo Akhir Tabungan 🏦</h1>
+            <p>Masukkan data tabungan Anda di bawah ini:</p>
+        </header>
+
+        <div class="form-card">
+            <form method="post" action="soal1_proses.php">
+                <div class="input-group">
+                    <label for="saldo_awal">Saldo Awal (Rp.)</label>
+                    <input type="number" id="saldo_awal" name="saldo_awal" required min="0">
+                </div>
+                
+                <div class="input-group">
+                    <label for="bunga">Bunga Per Bulan (%)</label>
+                    <input type="number" id="bunga" step="0.01" name="bunga" required min="0">
+                </div>
+                
+                <div class="input-group">
+                    <label for="bulan">Lama Bulan Menabung</label>
+                    <input type="number" id="bulan" name="bulan" required min="1">
+                </div>
+                
+                <div class="button-group">
+                    <input type="submit" name="submit" value="Hitung Saldo Akhir" class="btn primary">
+                    <input type="reset" name="reset" value="Reset Data" class="btn secondary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

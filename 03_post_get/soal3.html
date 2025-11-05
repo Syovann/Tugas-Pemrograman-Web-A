@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Pendaftaran Mahasiswa Baru</h2>
+
+    <form action="soal3_proses.php" method="post">
+
+        <label>Nama Lengkap:</label>
+        <input type="text" name="nama" required>
+
+        <label>Tempat Lahir:</label>
+        <input type="text" name="tempat" required>
+
+        <label>Tanggal Lahir:</label>
+        <div class="tgl-box">
+            <select id="tgl" name="tgl" required>
+                <option value="">Tanggal</option>
+            </select>
+
+            <select id="bln" name="bln" required>
+                <option value="">Bulan</option>
+            </select>
+
+            <select id="thn" name="thn" required>
+                <option value="">Tahun</option>
+            </select>
+        </div>
+
+        <label>Alamat Rumah:</label>
+        <textarea name="alamat" rows="3" required></textarea>
+
+        <label>Jenis Kelamin <span class="required">*</span></label>
+        <div class="radio-wrap">
+            <label class="radio-item">
+                <input type="radio" name="jk" value="Pria" required>
+                <span class="checkmark"></span>
+                Pria
+            </label>
+
+            <label class="radio-item">
+                <input type="radio" name="jk" value="Wanita">
+                <span class="checkmark"></span>
+                Wanita
+            </label>
+        </div>
+
+        <label>Asal Sekolah:</label>
+        <input type="text" name="asal" required>
+
+        <label>Nilai UAN:</label>
+        <input type="text" name="uan" required>
+
+        <div class="btn-box">
+            <button type="submit">Kirim</button>
+            <button type="reset" class="reset">Reset</button>
+        </div>
+
+    </form>
+</div>
+
+<script>
+    // Isi tanggal
+    for (let i = 1; i <= 31; i++) {
+        document.getElementById("tgl").innerHTML += `<option>${i}</option>`;
+    }
+
+    // Isi bulan
+    const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+    bulan.forEach(b => {
+        document.getElementById("bln").innerHTML += `<option>${b}</option>`;
+    });
+
+    // Isi tahun 1980 – 2005
+    for (let t = 1980; t <= 2005; t++) {
+        document.getElementById("thn").innerHTML += `<option>${t}</option>`;
+    }
+</script>
+
+</body>
+</html>

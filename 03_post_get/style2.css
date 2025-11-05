@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #0a2540; /* NAVY */
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: #f7f1e9; /* CREAM */
+    color: #0a2540;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #0a2540;
+    font-size: 16px;
+    outline: none;
+}
+
+.button-box {
+    margin-top: 15px;
+    text-align: center;
+}
+
+button {
+    width: 45%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background: #0a2540;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background: #163b63;
+}
+
+.reset {
+    background: #a33;
+}
+
+.reset:hover {
+    background: #c44;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 2px solid #0a2540;
+    text-align: center;
+}
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background: #0a2540;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background: #163b63;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

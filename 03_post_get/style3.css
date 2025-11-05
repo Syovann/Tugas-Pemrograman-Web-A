@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f6ef;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 450px;
+    background: #ffffff;
+    padding: 25px;
+    margin: 40px auto;
+    border-radius: 10px;
+    border: 2px solid #0a2540;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    color: #0a2540;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #0a2540;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0a2540;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    background: #fefefe;
+}
+
+textarea {
+    resize: none;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+/* Radio custom */
+.radio-wrap {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.radio-item {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    color: #0a2540;
+    font-size: 15px;
+}
+
+.radio-item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 2px solid #0a2540;
+    background: transparent;
+}
+
+.radio-item input:checked ~ .checkmark {
+    background: #0a2540;
+}
+
+/* Date layout */
+.tgl-box {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #0a2540;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button.reset {
+    background: #c71f1f;
+}
