@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Cek Tahun Kabisat Interaktif</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #0d0d0d, #000);
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #00ffcc;
+            text-shadow: 0 0 15px #00ffcc;
+            margin-bottom: 25px;
+        }
+
+        form {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 25px 35px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,255,204,0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="number"] {
+            margin-top: 10px;
+            padding: 10px;
+            width: 180px;
+            border: none;
+            border-radius: 5px;
+            background: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="number"]:focus {
+            box-shadow: 0 0 12px #00ffcc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #00ffcc, #0077ff);
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px #00ffcc;
+        }
+
+        .result {
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: 600;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .kabisat {
+            color: #00ff99;
+            text-shadow: 0 0 10px #00ff99;
+        }
+
+        .bukan {
+            color: #ff5555;
+            text-shadow: 0 0 10px #ff5555;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            font-size: 13px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>💫 Cek Tahun Kabisat Interaktif 💫</h2>
+
+    <form id="formKabisat" onsubmit="return false;">
+        <label for="tahun">Masukkan Tahun:</label><br>
+        <input type="number" id="tahun" name="tahun" required placeholder="contoh: 2024"><br>
+        <button type="submit">Cek Sekarang</button>
+    </form>
+
+    <div id="hasil" class="result"></div>
+
+    <footer>Aplikasi Interaktif Tahun Kabisat by @Pannn</footer>
+
+    <script>
+        document.getElementById("formKabisat").addEventListener("submit", function() {
+            const tahun = document.getElementById("tahun").value;
+            const hasilDiv = document.getElementById("hasil");
+
+            if (tahun === "") {
+                hasilDiv.innerHTML = "<span class='bukan'>Masukkan tahun terlebih dahulu!</span>";
+                return;
+            }
+
+            // Buat objek untuk mengirim data ke PHP
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "cek_kabisat.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    hasilDiv.innerHTML = this.responseText;
+                }
+            };
+
+            xhr.send("tahun=" + tahun);
+        });
+    </script>
+
+</body>
+</html>
